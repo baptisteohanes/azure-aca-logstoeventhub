@@ -1,6 +1,7 @@
 # Example – adjust values to match your environment
-subscription_id          = "00000000-0000-0000-0000-000000000000"
-resource_group_name      = "rg-aca-logstoeventhub"
-vnet_resource_group_name = "rg-networking"
-vnet_name                = "vnet-main"
-subnet_name              = "snet-aca"
+subscription_id          = "cdd095c4-45eb-402c-b38d-025726584daf"
+resource_group_name      = "rg-web-acalogstoeventhub"
+location                 = "France Central"
+vnet_resource_group_name = "rg-web-network"
+vnet_name                = "vnet-web-frc"
+subnet_name              = "AzureContainerAppsSubnet"

@@ -43,11 +43,10 @@ resource "azurerm_eventhub_namespace" "this" {
 }
 
 resource "azurerm_eventhub" "logs" {
-  name                = "evh-${var.environment_name}-logs"
-  namespace_name      = azurerm_eventhub_namespace.this.name
-  resource_group_name = azurerm_resource_group.this.name
-  partition_count     = 2
-  message_retention   = 1
+  name              = "evh-${var.environment_name}-logs"
+  namespace_id      = azurerm_eventhub_namespace.this.id
+  partition_count   = 2
+  message_retention = 1
 }
 
 # Shared access policy used by the diagnostic settings to send logs
@@ -91,9 +90,8 @@ resource "azurerm_monitor_diagnostic_setting" "cae" {
     category = "ContainerAppSystemLogs"
   }
 
-  metric {
+  enabled_metric {
     category = "AllMetrics"
-    enabled  = true
   }
 }
 
