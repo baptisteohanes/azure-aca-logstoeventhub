@@ -2,6 +2,7 @@
 subscription_id          = "cdd095c4-45eb-402c-b38d-025726584daf"
 resource_group_name      = "rg-web-acalogstoeventhub"
 location                 = "France Central"
+environment_name         = "aca-logstoeventhub"
 vnet_resource_group_name = "rg-web-network"
 vnet_name                = "vnet-web-frc"
 subnet_name              = "AcaLogstoeventhubSubnet"

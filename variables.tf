@@ -16,7 +16,6 @@ variable "resource_group_name" {
 variable "environment_name" {
   description = "Base name used for all resources"
   type        = string
-  default     = "aca-logstoeventhub"
 }
 
 # Existing VNet/Subnet references
